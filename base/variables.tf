@@ -16,10 +16,6 @@
     description = "Datastore cluster to deploy the VM."
   }
 
- // Folder Name
-  variable "vmfolder" {
-  } 
-
     // Name of VM Template
     variable "vmtemplate" {
       description = "Name of the template available in the vSphere"

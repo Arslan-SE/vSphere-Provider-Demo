@@ -25,9 +25,18 @@
     description = "number of instances you want deploy from the template"
     default = 1
   }
-  // VM Name or default to timestamp for unique value
+  
+  // Folder Name
+  variable "vmfolder" {
+  } 
+  
+  // VM Name
   variable "vmname" {
     description = "The name of the virtual machine used to deploy the vms"
+  }
+  // VM Name prefix 
+  variable "vmname_prefix" {
+    description = "The prefix of the name of the virtual machine used to deploy the vms"
   }
     // Name of VM Template
     variable "vmtemplate" {
