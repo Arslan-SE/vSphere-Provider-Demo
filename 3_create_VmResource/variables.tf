@@ -57,10 +57,6 @@
     default = 1
   }
   
-  // Folder Name
-  variable "vmfolder" {
-  } 
-  
   // VM Name
   variable "vmname" {
     description = "The name of the virtual machine used to deploy the vms"
