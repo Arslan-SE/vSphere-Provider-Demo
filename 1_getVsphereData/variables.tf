@@ -13,6 +13,10 @@
       description = "Name of the template available in the vSphere"
     }
 
+variable "vnet" {
+    description = "(Required)VLAN name where the VM should be deployed"
+  }  
+
 // Resource Pool Name (If Available)
 // variable "vmrp" {
 //  description = "Cluster resource pool that VM will be deployed to. you use following to choose default pool in the cluster (esxi1) or (Cluster)/Resources"

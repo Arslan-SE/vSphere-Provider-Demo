@@ -25,7 +25,6 @@ resource "vsphere_tag_category" "category" {
     "Folder",
   ]
 }
-
 // vSphere Tag
 resource "vsphere_tag" "tag" {
   name        = "${var.tag}"
