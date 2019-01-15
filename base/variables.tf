@@ -6,16 +6,13 @@
   // Cluster
     variable "cluster" {
   }
-
 // Datastore
     variable "datastore" {
   }
-
 // Datastore Cluster Name
   variable "ds_cluster" {
     description = "Datastore cluster to deploy the VM."
   }
-
     // Name of VM Template
     variable "vmtemplate" {
       description = "Name of the template available in the vSphere"
