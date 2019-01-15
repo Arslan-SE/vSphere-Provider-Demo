@@ -9,19 +9,25 @@
 // Datastore
     variable "datastore" {
   }
-// Datastore Cluster Name
-//  variable "ds_cluster" {
-//    description = "Datastore cluster to deploy the VM."
-//  }
+
     // Name of VM Template
     variable "vmtemplate" {
       description = "Name of the template available in the vSphere"
     }
+  
+  // Attribute Name 
+  variable "attribute" {
+    description = "The attribute Name"
+  }
 
-// Resource Pool Name (If Available)
-// variable "vmrp" {
-//  description = "Cluster resource pool that VM will be deployed to. you use following to choose default pool in the cluster (esxi1) or (Cluster)/Resources"
-// } 
+  // VM Name
+  variable "tagCategory" {
+    description = "The Tag Category Name"
+  }
+  // VM Name prefix 
+  variable "tag" {
+    description = "The Tag Name"
+  }
 
 
 #### NETWORKING ####
