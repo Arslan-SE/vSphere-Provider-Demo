@@ -1,6 +1,6 @@
 
 module "base" {
-  source  = "./base"
+  source  = "/base"
 }
 
 resource "vsphere_virtual_machine" "vm" {
