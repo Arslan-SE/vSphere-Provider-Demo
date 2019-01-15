@@ -1,3 +1,4 @@
+#TEST
 // Prefix gets added to every resource
   variable "prefix" {
   } 
