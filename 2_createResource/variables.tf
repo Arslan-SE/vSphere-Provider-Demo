@@ -1,4 +1,7 @@
-
+// Prefix gets added to every resource
+  variable "prefix" {
+  } 
+  
   // Name of the Datacenter.
     variable "dc" {
       description = "Name of the datacenter you want to deploy the VM to"
