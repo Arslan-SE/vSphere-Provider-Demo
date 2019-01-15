@@ -4,7 +4,7 @@ resource "vsphere_folder" "folder" {
   path          = "${var.prefix}${var.vmfolder}"
   type          = "vm"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
-  tags = ["${vsphere_tag.tag.id}"]
+  tags = ["${data.vsphere_tag.tag.id}"]
 }
 
 // Apply attribute to the folder
