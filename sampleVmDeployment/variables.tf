@@ -63,10 +63,6 @@
   variable "vmname_prefix" {
     description = "The prefix of the name of the virtual machine used to deploy the vms"
   }
-    // Name of VM Template
-    variable "vmtemplate" {
-      description = "Name of the template available in the vSphere"
-    }
     // # of CPUS
     variable "cpu_number" {
       description = "number of CPU (core per CPU) for the VM"
