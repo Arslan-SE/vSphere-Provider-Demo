@@ -1,9 +1,3 @@
-resource "vsphere_folder" "folder" {
-  path          = "${var.vmfolder}"
-  type          = "vm"
-  datacenter_id = "${data.vsphere_datacenter.dc.id}"
-}
-
 resource "vsphere_virtual_machine" "vm" {
   count            = "${var.instances}"
   name             = "${var.vmname_prefix}${var.vmname}${count.index+1}"
@@ -55,4 +49,6 @@ resource "vsphere_virtual_machine" "vm" {
       ipv4_gateway    = "${var.vmgateway}"
     }
   }
+
+  custom_attributes = "${map(vsphere_custom_attribute.attribute.id, "${var.attributeValue}")}"
 }
