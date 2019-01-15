@@ -4,46 +4,34 @@
   // Name of the Datacenter.
     variable "dc" {
       description = "Name of the datacenter you want to deploy the VM to"
-      default     = "PacketDatacenter" 
     }
-  
   // Cluster
     variable "cluster" {
-    default = "MainCluster"
   }
 
 // Datastore
     variable "datastore" {
-    default = "datastore1"
   }
 
- // Folder Name
-  variable "vmfolder" {
-    default = "PNC_POV"
-  } 
-
-// MNUMONIC TAG  
-  variable "mnemonic" {
-    default = "aar"
-  }
-
-  /*
-  // Datastore Cluster Name
+// Datastore Cluster Name
   variable "ds_cluster" {
     description = "Datastore cluster to deploy the VM."
   }
 
-    // Resource Pool Name (If Available)
-    variable "vmrp" {
-      description = "Cluster resource pool that VM will be deployed to. you use following to choose default pool in the cluster (esxi1) or (Cluster)/Resources"
-    } 
+ // Folder Name
+  variable "vmfolder" {
+  } 
+
+// Resource Pool Name (If Available)
+// variable "vmrp" {
+//  description = "Cluster resource pool that VM will be deployed to. you use following to choose default pool in the cluster (esxi1) or (Cluster)/Resources"
+// } 
 */
 
 #### NETWORKING ####
 
   variable "vnet" {
     description = "(Required)VLAN name where the VM should be deployed"
-    default = "VM Network"
   }  
   variable "ipv4submask" {
     description = "ipv4 Subnet mask"
@@ -52,16 +40,12 @@
   variable "ipaddress" {
     description = "host(VM) IP address in list format, support more than one IP. Should correspond to number of instances"
     type    = "list"
-    default = ["10.100.0.206"]
-    // default = ["10.100.0.206","10.100.0.206"]
   }
   variable "vmgateway" {
     description = "VM gateway to set during provisioning"
-    default = "10.100.0.1"
   }
   variable "vmdns" {
     type = "list"
-    default = ["8.8.8.8","1.1.1.1"]
   }
   
 #### VM CONFIG ####
@@ -73,12 +57,10 @@
   // VM Name or default to timestamp for unique value
   variable "vmname" {
     description = "The name of the virtual machine used to deploy the vms"
-    default     = "Ansible"
   }
     // Name of VM Template
     variable "vmtemplate" {
       description = "Name of the template available in the vSphere"
-      default = "UbuntuTemplate"
     }
     // # of CPUS
     variable "cpu_number" {

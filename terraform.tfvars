@@ -1,40 +1,30 @@
-datacenter = "dc"
+// VM Details
+vmname_prefix = "CBS"
+vmname = "testVm"
+vmdomain = "vsphere.local"
+cpu_number = "2"
+ram_size = "2048"
 
-resource_pool = "cluster1/Resources"
+// Template
+vmtemplate = "UbuntuTemplate"
 
-datastore_name = "datastore"
+// Destination
+datacenter = "PacketDatacenter"
+cluster = "MainCluster"
+vmfolder = "CBS_Demo"
+datastore_name = "datastore1"
+// ds_cluster = "DatastoreCluster"
 
-nas_host = "nas1"
+// Network
+vnet = "VM Network"
+ipv4submask = "24"
+ipaddress = ["10.100.0.207"] 
+vmgateway = "10.100.0.1"
+vmdns = ["8.8.8.8","1.1.1.1"]
 
-nas_path = "/export/nfsds"
+// OS Disk
+os_disk_size_gb = "16"
 
-switch_name = "dvs"
-
-port_group_name = "pg"
-
-port_group_vlan = "1000"
-
-template_name = "some-linux-template"
-
-virtual_machine_name_prefix = "e2e-test"
-
-virtual_machine_domain = "vsphere.local"
-
-virtual_machine_network_address = "10.0.0.0/24"
-
-virtual_machine_gateway = "10.0.0.1"
-
-virtual_machine_dns_servers = [
-  "10.0.0.10",
-]
-
-esxi_hosts = [
-  "esxi1",
-  "esxi2",
-  "esxi3",
-]
-
-network_interfaces = [
-  "vmnic0",
-  "vmnic1",
-]
+// Data Disk 1
+data_disk_size_gb = "16"
+label = "disk1"
