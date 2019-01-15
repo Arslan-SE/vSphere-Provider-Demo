@@ -1,3 +1,8 @@
+resource "vsphere_folder" "folder" {
+  path          = "${vars.vmfolder}"
+  type          = "vm"
+  datacenter_id = "${data.vsphere_datacenter.dc.id}"
+}
 
 resource "vsphere_virtual_machine" "vm" {
   count            = "${var.instances}"
