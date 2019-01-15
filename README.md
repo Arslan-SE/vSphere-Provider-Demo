@@ -1,17 +1,21 @@
-# Terraform vSphere Module
+# Terraform & vSphere Demo
 
 For Virtual Machine Provisioning using the vSphere Provider.
 
 There are 3 different folders. 
 
-** 1_getVsphereData **
-
+## Pre-Requisites
 1. Set the vSphere Environment Variables:
-
+```
 export VSPHERE_USER="<Username>@vsphere.local"
 export VSPHERE_PASSWORD="<Password>"
 export VSPHERE_SERVER="<IP Address>"
 export VSPHERE_ALLOW_UNVERIFIED_SSL=true
+```
+
+## 1_getVsphereData
+
+
 
 2. git clone git@github.com:Arslan-SE/Terraform-vSphere.git
 
