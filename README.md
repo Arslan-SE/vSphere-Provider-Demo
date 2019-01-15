@@ -2,6 +2,10 @@
 
 For Virtual Machine Provisioning using the vSphere Provider.
 
+There are 3 different folders. 
+
+** 1_getVsphereData **
+
 1. Set the vSphere Environment Variables:
 
 export VSPHERE_USER="<Username>@vsphere.local"
