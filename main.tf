@@ -1,13 +1,11 @@
 resource "vsphere_virtual_machine" "vm" {
   count            = "${var.instances}"
-  name             = "${var.vmname}${count.index+1}"
+  name             = "${var.vmname_prefix}${var.vmname}${count.index+1}"
   //name             = "${var.vmname}"
   resource_pool_id = "${data.vsphere_compute_cluster.compute_cluster.resource_pool_id}"
   folder           = "${var.vmfolder}"
-
-
   // datastore_cluster_id = "${data.vsphere_datastore_cluster.datastore_cluster.id}"
-
+  
   num_cpus  = "${var.cpu_number}"
   memory    = "${var.ram_size}"
   //guest_id  = "${data.vsphere_virtual_machine.template.guest_id}"

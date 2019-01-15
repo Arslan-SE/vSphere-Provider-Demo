@@ -1,6 +1,6 @@
 # Terraform vSphere Module
 
-For Virtual Machine Provisioning with (Linux).
+For Virtual Machine Provisioning using the vSphere Provider.
 
 1. Set the vSphere Environment Variables:
 
@@ -9,11 +9,13 @@ export VSPHERE_PASSWORD="<Password>"
 export VSPHERE_SERVER="<IP Address>"
 export VSPHERE_ALLOW_UNVERIFIED_SSL=true
 
-2. Run terraform init
+2. git clone git@github.com:Arslan-SE/Terraform-vSphere.git
 
-3. Run terraform plan
+3. Run terraform init
 
-4. Run terraform apply
+4. Run terraform plan
+
+5. Run terraform apply
 
 ## Deploys (Single/Multiple) Virtual Machines to your vSphere environment
 
