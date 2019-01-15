@@ -21,17 +21,3 @@ data "vsphere_virtual_machine" "template" {
   name          = "${var.vmtemplate}"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
-/*
-// Resource Pool (If available, else use cluster pool id)
-data "vsphere_resource_pool" "pool" {
-  name          = "${var.vmrp}"
-  datacenter_id = "${data.vsphere_datacenter.dc.id}"
-}
-
-//SDRS - Datastore Cluster wich contains multiple Datastores (if available)
-//data "vsphere_datastore_cluster" "datastore_cluster" {
-//  name          = "${var.ds_cluster}"
-//  datacenter_id = "${data.vsphere_datacenter.dc.id}"
-//}
-
-*/
