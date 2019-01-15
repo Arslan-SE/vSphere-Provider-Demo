@@ -1,6 +1,11 @@
 
 module "base" {
   source  = "../base"
+  dc = "${var.dc}"
+  cluster = "${var.cluster}"
+  datastore = "${var.datastore}"
+  ds_cluster = "${var.ds_cluster}"
+  vmtemplate = "${var.vmtemplate}"
 }
 
 resource "vsphere_virtual_machine" "vm" {
