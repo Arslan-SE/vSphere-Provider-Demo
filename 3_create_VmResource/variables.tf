@@ -26,6 +26,11 @@
     description = "The attribute Name"
   }
 
+  // Attribute Name 
+  variable "attributeValue" {
+    description = "The attribute value"
+  }
+
   // VM Name
   variable "tagCategory" {
     description = "The Tag Category Name"
