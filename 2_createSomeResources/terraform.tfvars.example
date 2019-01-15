@@ -1,0 +1,24 @@
+// Rename this file to terraform.tfvars and fill in the necessary values.
+
+// Prefix gets added to every resource
+prefix = "<prefix>"
+
+// Template
+vmtemplate = "<templateName>"
+
+// Destination
+dc = "<datacenterName>"
+cluster = "<clusterName>"
+datastore = "<datastoreName>"
+vnet = "<networkName>"
+
+// Folder
+vmfolder = "<folderName>"
+
+// Tags
+tagCategory = "<tagCategoryName>"
+tag = "<tagName>"
+
+// Attributes
+attribute = "<attKey>"
+attributeValue = "<attVal>"

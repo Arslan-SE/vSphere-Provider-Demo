@@ -1,0 +1,46 @@
+// Rename this file to terraform.tfvars and replace <> with the actual values.
+
+// Prefix gets added to every resource
+prefix = "<prefix>"
+
+// VM Details
+vmname_prefix = "<vmPrefix>"
+vmname = "<vmName>"
+vmdomain = "vsphere.local"
+cpu_number = "2"
+ram_size = "2048"
+
+// Template
+vmtemplate = "<templateName>"
+
+// Destination
+dc = "<datacenterName>"
+cluster = "<clusterName>"
+vmfolder = "<folderName>"
+datastore = "<datastoreName>"
+vnet = "<networkName>"
+
+// Folder
+vmfolder = "<folderName>"
+
+// Network
+vnet = "<networkName>"
+ipv4submask = "24"
+ipaddress = ["192.168.1.101"] 
+vmgateway = "192.168.1.1"
+vmdns = ["8.8.8.8","1.1.1.1"]
+
+// OS Disk
+os_disk_size_gb = "16"
+
+// Data Disk 1
+data_disk_size_gb = "16"
+label = "disk1"
+
+// Tags
+tagCategory = "<tagCategoryName>"
+tag = "<tagName>"
+
+// Attributes
+attribute = "<attKey>"
+attributeValue = "<attVal>"
