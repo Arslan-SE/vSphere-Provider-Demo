@@ -1,10 +1,9 @@
-
 // Create Folder
 resource "vsphere_folder" "folder" {
-  path          = "${var.prefix}${var.vmfolder}"
-  type          = "vm"
-  datacenter_id = "${data.vsphere_datacenter.dc.id}"
-  tags = ["${vsphere_tag.tag.id}"]
+  path              = "${var.prefix}${var.vmfolder}"
+  type              = "vm"
+  datacenter_id     = "${data.vsphere_datacenter.dc.id}"
+  tags              = ["${vsphere_tag.tag.id}"]
   custom_attributes = "${map(vsphere_custom_attribute.attribute.id, "${var.attributeValue}")}"
 }
 
@@ -19,13 +18,15 @@ resource "vsphere_custom_attribute" "attribute" {
 resource "vsphere_tag_category" "category" {
   name        = "${var.tagCategory}"
   description = "Managed by Terraform"
-  cardinality = "MULTIPLE" 
+  cardinality = "MULTIPLE"
+
   // The types of objects this tag can be associated with.
   associable_types = [
     "VirtualMachine",
     "Folder",
   ]
 }
+
 // vSphere Tag
 resource "vsphere_tag" "tag" {
   name        = "${var.tag}"
