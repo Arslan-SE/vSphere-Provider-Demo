@@ -7,10 +7,3 @@ resource "vsphere_folder" "folder" {
 
   //custom_attributes = "${map(vsphere_custom_attribute.attribute.id, "${var.attributeValue}")}"
 }
-
-// Apply attribute to the folder
-// https://www.terraform.io/docs/providers/vsphere/r/custom_attribute.html
-resource "vsphere_custom_attribute" "attribute" {
-  name                = "${var.prefix}${var.attribute}"
-  managed_object_type = "Folder"
-}
