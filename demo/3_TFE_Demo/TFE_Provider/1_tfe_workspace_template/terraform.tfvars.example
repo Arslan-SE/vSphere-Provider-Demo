@@ -1,0 +1,24 @@
+aws_region = "us-east-2"
+
+use_case_name = "Use_Case001"
+
+org = "<yourTFEorgName>"
+
+hostname = "app.terraform.io"
+
+vcs_identifier = "<githubUserName>/use_case001-repo"
+
+creator_vcs_identifier = "<githubUserName>/use_case001-creator"
+
+tfe_oauth_token = "<yourOauthToken>"
+
+tfe_user_token = "<tfeUserApiToken>"
+
+master_aws_access_key = "<yourAccessKey>"
+
+master_aws_secret_key = "<yourSecretKey>"
+
+# The original demo just uses the same Access/Secret Keys but you can get creative an generate a different IAM set of API keys for this demo
+sub_account_aws_access_key = "<yourOtherAccessKey>"
+
+sub_account_aws_secret_key = "<yourOtherSecretKey>"
